@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="uniform.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="friend_FormValid.js"></script>
+    <title>Client-side input validation</title>
+    <style>
+        /*the CSS style applies to all html elements with class='error'*/
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .errorln {
+            color: red;
+            font-size: smaller;
+            font-style: italic;
+            opacity: .8;
+        }
+        input[type=submit] {
+            width: 30%;
+            background-color:darkgreen;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            font-size: large;
+            font-weight: bold;
+        }
+        #formDiv {
+            margin-left: 20%;
+            margin-right: 20%;
+            border: 3px solid darkolivegreen;
+            padding: 2%;
+            background-color: rgba(212, 225, 220, 0.593);
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+        }
+        strong {
+            font-size: larger;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('form div').addClass('mb-3');
+            $('input, textarea, select').addClass('form-control');
+            // $('#gender').addClass('form-check');
+            $('input[type=radio]').addClass('form-check-input').removeClass('form-control');
+        })
+    </script>
+</head>
+
+<body>
+    <div id="navDiv" class="content container-fluid">
+        <ul id="nav" class="nav nav-pills nav-justified">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Service</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="information.html">Facts</a></li>
+                  <li><a class="dropdown-item active" href="friend.html">Friend Registration</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about_me.html">About</a>
+            </li>
+          </ul>
+    </div>
+
+    <p class="title long">Let me know you, my friend!</p>
+
+    <form id="formDiv" name="myForm" method="post" action="success.html">  <!-- target="iframe" use to test-->
+        <div id="theName">
+            <label for="fullName"><strong>Full Name:</strong></label>
+            <input id="fullName" class="form-control" type="text" name="fullName" size="20"/>
+        </div>
+
+        <div id="theAddress">
+            <strong>Address:</strong><br />
+            <textarea name="address" rows="3"></textarea>
+            <!-- ,cols="25" -->
+        </div>
+
+        <div id="gender"><strong>Gender:</strong></div>
+        <div id="thegender">
+            <label>
+                <span><input type="radio" name="gender" value="male" />Male</span>
+            </label>
+            <label>
+                <span><input type="radio" name="gender" value="female" />Female</span>
+            </label>
+            <label>
+                <span><input type="radio" name="gender" value="other" />Other</span>
+            </label>
+            <label>
+                <span><input type="radio" name="gender" value="notdisclosed" />Prefer not to say</span>
+            </label>
+        </div>
+        <br/>
+        <div id="themajor"><strong>Major of study / Area of expertise</strong>
+            <select name="major">
+                <option value="" selected>Undecided</option>
+                <option value="ACC">Accounting</option>
+                <option value="MIS">Information Systems</option>
+                <option value="FIN">Finance</option>
+                <option value="MKTG">Marketing</option>
+                <option value="MGT">Management</option>
+                <option value="OTH">Others</option>
+            </select>
+        </div>
+        <br/>
+        <div id="theyear">
+            <strong>Date of birth</strong>
+            <input type="number" name="year" size="20" />
+        </div>
+        <br>
+        <input type="submit" name="submit" value="Submit"/>
+        <div id="output"></div>
+    </form>
+    
+    <!-- <iframe id="iframe" name="iframe" style="display:none;"></iframe> -->
+</body>
+</html>
