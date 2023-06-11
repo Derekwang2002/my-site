@@ -19,36 +19,62 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
-    p, .imageContainer {
-      max-width: 60%; 
+    p,
+    .imageContainer {
+      max-width: 40%;
       margin-left: auto;
       margin-right: auto;
       padding-left: 0%;
+    }
+    ul {
+      margin: auto;
+    }
+    #dividor {
+      margin-top: 3%;
     }
   </style>
 </head>
 
 <body>
-  <div id="navDiv" class="content container-fluid">
-    <ul id="nav" class="nav nav-pills nav-justified">
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="home.html">Home</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-          aria-expanded="false">Service</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="information.html">Facts</a></li>
-          <li><a class="dropdown-item" href="friend.html">Friend Registration</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="about_me.html">About</a>
-      </li>
-    </ul>
-  </div>
-  <p class="title">About me</p>
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blogs</a>
+          </li>
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+
+  
+  <br><br><br>
+  <div class="mx-auto text-center prose prose-indigo">
+    <img class="object-cover mx-auto h-40 w-40 rounded-full" src="pictures/thumbsUp.jpeg"
+      alt="author profile image">
+    <h1></h1>
+  </div>
+  <br>
+  <p class="title">Derek Wang</p>
+
+  
   <div class="flex flex-wrap text-center">
     <div class="w-full pt-4">
       <div>
@@ -98,9 +124,9 @@
   </div>
 
   <!-- dividor -->
-  <div class="relative my-8">
+  <div id="dividor" class="relative my-8">
     <div class="absolute inset-0 flex items-center" aria-hidden="true">
-      <div class="mx-auto w-3/5 border-t border-gray-200"></div>
+      <div class="mx-auto w-2/5 border-t border-gray-200"></div>
     </div>
     <div class="relative flex justify-center ">
       <span class="bg-white px-2 text-gray-200">
@@ -112,24 +138,25 @@
   <!-- content -->
   <div class="">
     <p>
-      Hi, my name is Derek Wang (王兴恩 in Chinese). 
+      Hi, my name is Derek Wang (王兴恩 in Chinese).
       I came from <b>Weifang Shandong</b>,
       and recently taking undergraduate degree in
       <b>Chengdu</b>.
     </p>
     <p>
       <br> My major is <b>MIS (Management Information System)</b> at <b>SWUFE-UD college</b>,
-      which is a coorporation project delivered by <i>University of Delaware</i> and <i>Southwest University of Finance and
-      Economics</i>
+      which is a coorporation project delivered by <i>University of Delaware</i> and <i>Southwest University of Finance
+        and
+        Economics</i>
     </p>
     <br>
-    <div class="container container-fluid imageContainer">
+    <!-- <div class="container container-fluid imageContainer">
       <div class="row">
         <img src="pictures/swufeGate.jpeg" alt="swufeGate" class="col-4">
         <img src="pictures/swufeTower.jpeg" alt="swufeTower" class="col-4">
         <img src="pictures/swufeRoad.jpeg" alt="swufeTower" class="col-4">
       </div>
-    </div>
+    </div> -->
 
     <br><br><br><br><br><br>
 
@@ -156,7 +183,7 @@
 
 
 
-    <!-- <details>
+  <!-- <details>
       <summary>click to see its taobao shop</summary>
       <a href="https://sinloy.tmall.com/shop/view_shop.htm?spm=pc_detail.27183998.202202.1.2bda7dd6BFFTN9">
         taobao shop of sinoy
